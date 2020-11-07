@@ -1,0 +1,281 @@
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track - SLAVe rak */ 
+::-webkit-scrollbar-track {
+  background: #bebebe;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #5ec166; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #358d3c; 
+}
+
+html, body {
+    min-height: 100%;
+    min-width: 100%;
+}
+
+#header-section {
+	background-color: #efefef;
+	position: absolute;
+	top: 0;
+	left: -250px;
+	height: 100%;
+	width: 300px;
+	z-index: 999999;
+}
+
+#header-left-div {
+	width: 250px;
+	height: 100%;
+}
+
+#header-left-head-div {
+	height: 50px;
+	width: 100%;
+	border-bottom: 1px solid #787878;
+    background: #45464F;
+}
+
+#logo-img {
+	height: 44px;
+	margin-top: 3px;
+	margin-left: 10px;
+}
+
+#search-div {
+	width: 250px;
+}
+
+#search-input-div {
+	width: 250px;
+	height: 30px;
+}
+
+#search-input {
+	width: 206px;
+	height: 24px;
+	border: 1px solid #787878;
+	border-bottom: 1px solid #bebebe;
+    border-right: none;
+	border-top: 0px solid #787878;
+	font-size: 18px;
+	padding: 4px;
+    background-color: lightgray;
+    outline: 0;
+}
+
+#search-input:focus {
+	background-color: white;
+}
+
+#search-input:focus #search-input-button {
+	background-color: white;
+}
+
+#search-input-button {
+	width: 42px;
+	height: 32px;
+	background-color: lightgray;
+	border-bottom: 1px solid #bebebe;
+    color: #787878;
+}
+
+#search-input-button:hover {
+    background-color: #dedede;
+    color: #000000;
+}
+
+#control_panel_map_button {
+	width: 218px;
+	margin-top: 8px;
+	padding: 5px;
+	border: 1px solid lightgray;
+	text-align: center;
+	background-color: #45464F;
+	color: white;
+}
+
+#radius-input {
+	width: 226px;
+}
+
+/* TRASH CANS LIST */
+
+#bin-list {
+	width: 250px;
+    overflow-y: auto;
+    height: calc(100% - 84px);
+	border-top: 1px solid #bebebe;
+    /* scrollbar for Firefox */
+    scroll-behavior: smooth;
+    scrollbar-color: #5ec166 #bebebe;
+    scrollbar-width: thin;
+}
+
+#bin-list:hover {
+    scrollbar-color: #358d3c #bebebe;
+}
+
+#header-town-div {
+	padding: 4px;
+	background-color: lightgray;
+}
+
+#select_city {
+	width: 180px;
+}
+
+#trashlist {
+    list-style: none;
+    margin: 0;
+    margin-top: 6px;
+    padding: 0;
+}
+
+.trashlist-object {
+    height: 84px;
+    display: flex;
+    align-items: center;
+    margin: 1px auto;
+    background: white;
+    width: calc(100% - 6px);
+}
+
+.trash-status {
+    display: inline-block;
+    margin: 0 8px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none 
+}
+
+.trash-status-percents {
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 19px;
+    z-index: 12;
+    width: 42;
+}
+
+.fa-trash {
+    font-size: 48px;
+    color: slategrey;
+}
+
+.trash-status .fa-trash {
+    position: relative;
+    top: -28px;
+}
+
+.trash-object-info {
+    display: inline-block;
+}
+
+.trash-object-address {
+    font-family: sans-serif
+}
+
+/* RIGHT MENU */
+
+#header-right-div {
+	width: 50px;
+	height: 100%;
+	background-color: #45464F;
+}
+
+#menu-button {
+	height: 50px;
+	width: 50px;
+}
+
+#menu-button:hover {
+    background-color: #363639;
+}
+
+/* MAP */
+
+#map-div {
+	position: absolute;
+	left: 50px;
+	width: calc(100% - 50px);
+	height: 100%;
+}
+
+#control_panel_map {
+	position: absolute;
+	height: 81px;
+	width: 230px;
+	background-color: white;
+	z-index: 999999999;
+	bottom: 24px;
+	right: 58px;
+	box-shadow: 0 1px 2px lightgray;
+	border-radius: 1px;
+	padding: 15px;
+}
+
+/* HELP CLASSES */
+
+.center {
+	display: flex; 
+	align-items: center; 
+	justify-content: center;
+	text-align: center;
+}
+
+.fa-bars {
+    font-size: 20px;
+    color: #787878;
+}
+
+.pointer {
+	cursor: auto;
+}
+
+.pointer:hover {
+	cursor: pointer;
+}
+
+.flex {
+	display: flex;
+}
+
+.inline_block {
+	display: inline-block;
+}
+
+.transition-effect {
+    transition: 0.1s ease all;
+}
+
+/* MEDIA */
+
+@media screen and (max-width: 768px) {
+    #header-section, #bin-list, #search-input, #header-left-div {
+        width: 100%;
+        
+    }
+    #header-section {
+        left: calc(-100% + 50px);
+        z-index: 1000000000;
+    }
+    #search-div {
+        width: 100%;
+        justify-content: center;
+    }
+    #search-input-div {
+        width: calc(100% - 50px)
+    }
+}
