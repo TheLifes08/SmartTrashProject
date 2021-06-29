@@ -54,11 +54,11 @@ class RubbishBin:
 
     def send_bin_data(self, occup):
         print(occup)
-        r = requests.post("http://trashbinptz.000webhostapp.com/php/update_data.php", data={'access_id': 'hg4478slave228akimnespidevicebotfeymn9', 'bin_id': self.bin_id, 'mode': 'update', 'occupancy': occup })
+        r = requests.post("http://trashbinptz.000webhostapp.com/php/update_data.php", data={'access_id': '...', 'bin_id': self.bin_id, 'mode': 'update', 'occupancy': occup })
         return r
 
     def create_bin_data(self, lat, lon, occup):
-        r = requests.post("http://trashbinptz.000webhostapp.com/php/update_data.php", data={'access_id': 'hg4478slave228akimnespidevicebotfeymn9', 'bin_id': self.bin_id, 'mode': 'create', 'occupancy': occup, 'lat': lat, 'lon': lon })
+        r = requests.post("http://trashbinptz.000webhostapp.com/php/update_data.php", data={'access_id': '...', 'bin_id': self.bin_id, 'mode': 'create', 'occupancy': occup, 'lat': lat, 'lon': lon })
         return r
 
     def check_messages(self):
@@ -398,7 +398,7 @@ OCCUPANCY = int(ofile.read())
 BIN = RubbishBin(BIN_ID, {}, admins=[39140456], height=57)
 BIN.objects = {
     'help': Help(),
-    'bot': VkBot('b1dbfdc47c79aa6c7df4074ed3e19a0939a991303f36d8a7027c79d72d82132e37ec99c0aaf5b19b4984a'),
+    'bot': VkBot('...'),
     'uss': UltrasonicSensor(16, 18)#,
     #'relay': Relay(12),
     #'rfid': RFID() #BIN.objects['rfid'].detect_card()
