@@ -15,7 +15,7 @@ var widthDevice = $(window).width()
 
 $(document).ready(function(){
 	$("#menu-button").bind('click', function(){
-//    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+
     if ($(window).width() < 769){
         if(menu_state)
 			$("#header-section").animate({'left': -widthDevice + 50 + "px"}, 300);
@@ -50,7 +50,6 @@ $(document).ready(function(){
 });
 
 function hide_panel(){
-    
 	if(menu_state){
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
             $("#header-section").animate({'left':'0'}, 300);
@@ -119,7 +118,6 @@ function display_point(latlng, occupancy, j){
 }
 
 function display_map_points(lat, lon, k){
-	console.log("display points " + lat + " " + lon + " " + k);
 	$("#trashlist").html("");
 	
 	$.ajax({

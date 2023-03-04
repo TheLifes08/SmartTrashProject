@@ -2,7 +2,7 @@
 
 require_once("main.php");
 
-if($_POST['access_id'] != 'hg4478slave228akimnespidevicebotfeymn9') {
+if($_POST['access_id'] != '...') {
 	echo 'wrong password';
 	exit;
 }

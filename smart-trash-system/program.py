@@ -53,7 +53,6 @@ class RubbishBin:
         GPIO.setmode(GPIO.BOARD)
 
     def send_bin_data(self, occup):
-        print(occup)
         r = requests.post("http://trashbinptz.000webhostapp.com/php/update_data.php", data={'access_id': '...', 'bin_id': self.bin_id, 'mode': 'update', 'occupancy': occup })
         return r
 
